@@ -2,33 +2,23 @@ name: Run Playwright and Generate a video, screenshots
 
 on:
   push:
-    branches: "*"
-  workflow_dispatch:
+  pull_request:
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v2
         with:
-          node-version: "17.x"
-
+          node-version: '18.x'
       - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y libgbm-dev         
-          npm ci
-          npx playwright install chromium
-
-      - name: Start the application
-        run: |
-          export DISPLAY=:1
-          npm run start & npx wait-on http://localhost:3000
-
+        run: npm ci
+      - name: Install playwright browsers
+        run: npx playwright install --with-deps
+      - name: Build the next app
+        run: npm run build
       - name: Run Playwright tests
         run: npx playwright test --config=playwright.config.js
-        
