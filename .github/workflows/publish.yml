@@ -39,6 +39,8 @@ jobs:
         run: |
           npm install
           npx playwright install-deps
+      - name: Build the Next App
+        run: npm run build
       - name: Test Playwright
         id: playwright-tests
         run: |
