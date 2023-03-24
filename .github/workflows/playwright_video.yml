@@ -23,7 +23,6 @@ jobs:
           sudo apt-get install -y libgbm-dev         
           npm ci
           npx playwright install chromium
-          npm install -g lighthouse chrome-launcher axe-core chromium wait-on
 
       - name: Start the application
         run: |
