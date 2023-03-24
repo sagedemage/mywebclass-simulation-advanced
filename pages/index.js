@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
       <BrandExample></BrandExample>
       <main className={styles.main}>
-        <h1>Sample Page</h1>
+        <h1>Home Page</h1>
         <p>Sample page</p>
       </main>
     </>
