@@ -1,8 +1,12 @@
 name: Run Playwright and Generate a video, screenshots
 
 on:
-  push:
   pull_request:
+    branches:
+      - 'master'
+  push:
+    branches:
+      - 'master'
 
 jobs:
   build-and-test:
