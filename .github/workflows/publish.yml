@@ -9,7 +9,7 @@ on:
       - 'v*'
 
 env:
-  DOCKER_REPO_NAME: kaw393939/mywebclass-advanced
+  DOCKER_REPO_NAME: sagedemage/mywebclass-simulation-advanced
 
 jobs:
   build:
