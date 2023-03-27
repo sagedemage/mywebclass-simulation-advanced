@@ -1,17 +1,14 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Head from "next/head";
+import { Inter } from "next/font/google";
+import styles from "@/styles/Home.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import BrandExample from "../components/navbar";
+import { useUser } from "@auth0/nextjs-auth0/client";
 
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-
-import BrandExample from '../components/navbar';
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const { user } = useUser();
   return (
     <>
       <Head>
@@ -23,8 +20,10 @@ export default function Home() {
       <BrandExample></BrandExample>
       <main className={styles.main}>
         <h1>Home Page</h1>
-        <p>Sample page</p>
+
+        {!user && <h1>You are currently not logged in</h1>}
+        {user && <h1>Hello {user.name}</h1>}
       </main>
     </>
-  )
+  );
 }
