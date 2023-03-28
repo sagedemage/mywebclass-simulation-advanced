@@ -62,4 +62,7 @@ Finally, use Playwright to create powerful and reliable automated tests for web 
 - Sprint 4 - TBD
 
 
-# ADD YOUR PROJECT LINKS BELOW THIS 
+# ADD YOUR PROJECT LINKS BELOW THIS
+
+## Team Productivity Log 
+[Team Productivity Log](team_prod_log.md)
