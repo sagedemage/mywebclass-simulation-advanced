@@ -1,7 +1,7 @@
 ---
 name: Documentation
 about: This is to submit documentation updates
-title: ''
+title: "(insert here) - [Documentation]"
 labels: documentation
 assignees: ''
 
