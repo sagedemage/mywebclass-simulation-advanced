@@ -21,7 +21,7 @@
     <td>3/23/2023</td>
     <td>3/23/2023</td>
     <td>Fix</td>
-    <td></td>
+    <td>The Publish GitHub action can build and publish the web app to Docker Hub. </td>
   </tr>
   <tr>
     <td>Lighthouse CI - [Feature]</td>
@@ -32,7 +32,7 @@
     <td>3/23/2023</td>
     <td>3/23/2023</td>
     <td>Feature</td>
-    <td></td>
+    <td>Added a GitHub workflow to automatically test the website using Lighthouse CI</td>
   </tr>
   <tr>
     <td>Run Lighthouse CI (Pushing to Master) - [Modification]</td>
@@ -43,7 +43,7 @@
     <td>3/23/2023</td>
     <td>3/23/2023</td>
     <td>Feature</td>
-    <td></td>
+    <td>Run the Lighthouse CI Action when pushing to the master branch.</td>
   </tr>
   <tr>
     <td>Authentication Using Auth0 - [Feature]</td>
@@ -54,7 +54,7 @@
     <td>3/27/2023</td>
     <td>3/27/2023</td>
     <td>Feature</td>
-    <td></td>
+    <td>Added Auth0 to the Next.js app for authentication</td>
   </tr>
   <tr>
     <td>Make a Base Next.js Project - [Feature]</td>
@@ -65,7 +65,7 @@
     <td>3/24/2023</td>
     <td>3/24/2023</td>
     <td>Feature</td>
-    <td></td>
+    <td>Made a base Next.js project</td>
   </tr>
   <tr>
     <td>Fix Publish Workflow - [Fix]</td>
@@ -76,6 +76,6 @@
     <td>3/24/2023</td>
     <td>3/24/2023</td>
     <td>Fix</td>
-    <td></td>
+    <td>Fixed the publish GitHub workflow.</td>
   </tr>
 </table>
