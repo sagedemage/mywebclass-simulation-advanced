@@ -1,3 +1,5 @@
+<h1> Team Productivity Log </h1>
+
 <table>
   <tr>
     <th>Issue Title</th>
