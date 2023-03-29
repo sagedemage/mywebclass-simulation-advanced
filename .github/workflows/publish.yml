@@ -3,9 +3,9 @@ name: Test, Build, and Push Image to Docker
 on:
   push:
     branches:
-      - 'master'
+      - "master"
     tags:
-      - 'v*'
+      - "v*"
 
 env:
   DOCKER_REPO_NAME: sagedemage/mywebclass-simulation-advanced
@@ -37,7 +37,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: |
-          npm install
+          npm install --force
           npx playwright install-deps
       - name: Build the Next App
         run: npm run build
@@ -67,7 +67,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          platforms: 'linux/arm64/v8, linux/amd64'
+          platforms: "linux/arm64/v8, linux/amd64"
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
